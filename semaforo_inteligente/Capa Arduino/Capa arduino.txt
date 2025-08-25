@@ -1,0 +1,39 @@
+// Pines asignados para cada color
+const int pinVerde    = 21;
+const int pinAmarillo = 22;
+const int pinRojo     = 23;
+
+void setup() {
+  Serial.begin(9600);
+
+  pinMode(pinVerde, OUTPUT);
+  pinMode(pinAmarillo, OUTPUT);
+  pinMode(pinRojo, OUTPUT);
+
+  // Apagar todos al inicio
+  digitalWrite(pinVerde, LOW);
+  digitalWrite(pinAmarillo, LOW);
+  digitalWrite(pinRojo, LOW);
+}
+
+void loop() {
+  if (Serial.available()) {
+    String comando = Serial.readStringUntil('\n');
+    comando.trim(); 
+
+    // Separar color y estado
+    int separador = comando.indexOf(':');
+    if (separador > 0) {
+      String color = comando.substring(0, separador);
+      int estado = comando.substring(separador + 1).toInt();
+
+      if (color == "verde") {
+        digitalWrite(pinVerde, estado);
+      } else if (color == "amarillo") {
+        digitalWrite(pinAmarillo, estado);
+      } else if (color == "rojo") {
+        digitalWrite(pinRojo, estado);
+      }
+    }
+  }
+}
