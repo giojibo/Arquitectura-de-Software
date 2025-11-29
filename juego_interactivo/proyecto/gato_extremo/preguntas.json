@@ -1,0 +1,366 @@
+{
+  "tema": "mixto_basico",
+  "tiempo_limite_seg": 15,
+  "items": [
+    {
+      "q": "¿Qué signo se usa al final de una pregunta?",
+      "opts": [
+        ".",
+        "?",
+        "!"
+      ],
+      "ans": 1,
+      "exp": "Las preguntas terminan con signo de interrogación."
+    },
+    {
+      "q": "¿Cuál de estas palabras está bien escrita?",
+      "opts": [
+        "caza",
+        "casa",
+        "kaza"
+      ],
+      "ans": 1,
+      "exp": "Casa es la forma correcta."
+    },
+    {
+      "q": "¿Cuál palabra rima con “sol”?",
+      "opts": [
+        "luna",
+        "col",
+        "nube"
+      ],
+      "ans": 1,
+      "exp": "Col rima con sol."
+    },
+    {
+      "q": "¿Cuál es una vocal?",
+      "opts": [
+        "e",
+        "t",
+        "m"
+      ],
+      "ans": 0,
+      "exp": "Las vocales son a, e, i, o, u."
+    },
+    {
+      "q": "¿Cuál de las siguientes palabras es un sustantivo?",
+      "opts": [
+        "correr",
+        "perro",
+        "rápido"
+      ],
+      "ans": 1,
+      "exp": "Perro nombra un ser; es sustantivo."
+    },
+    {
+      "q": "¿Qué se usa para escribir una oración correctamente?",
+      "opts": [
+        "Mayúscula al inicio y punto al final",
+        "Todo en mayúsculas",
+        "Solo punto"
+      ],
+      "ans": 0,
+      "exp": "Regla básica de ortografía."
+    },
+    {
+      "q": "¿Qué palabra está escrita con mayúscula correctamente?",
+      "opts": [
+        "México",
+        "méxico",
+        "meXico"
+      ],
+      "ans": 0,
+      "exp": "Nombres propios inician con mayúscula."
+    },
+    {
+      "q": "¿Cuál de estas oraciones está bien escrita?",
+      "opts": [
+        "el sol brilla.",
+        "El sol brilla.",
+        "el Sol Brilla"
+      ],
+      "ans": 1,
+      "exp": "Mayúscula inicial y punto final."
+    },
+    {
+      "q": "¿Cuánto es 5 + 3?",
+      "opts": [
+        "9",
+        "8",
+        "7"
+      ],
+      "ans": 1,
+      "exp": "5+3=8."
+    },
+    {
+      "q": "¿Cuál número es mayor?",
+      "opts": [
+        "12",
+        "20",
+        "10"
+      ],
+      "ans": 1,
+      "exp": "20 es el mayor."
+    },
+    {
+      "q": "Si tienes 10 manzanas y das 4, ¿cuántas te quedan?",
+      "opts": [
+        "4",
+        "5",
+        "6"
+      ],
+      "ans": 2,
+      "exp": "10-4=6."
+    },
+    {
+      "q": "¿Qué forma tiene una pelota?",
+      "opts": [
+        "Cuadrada",
+        "Redonda",
+        "Triangular"
+      ],
+      "ans": 1,
+      "exp": "Esférica/redonda."
+    },
+    {
+      "q": "¿Cuál número va después del 29?",
+      "opts": [
+        "30",
+        "28",
+        "31"
+      ],
+      "ans": 0,
+      "exp": "Secuencia natural."
+    },
+    {
+      "q": "¿Cuánto es 7 – 2?",
+      "opts": [
+        "5",
+        "4",
+        "6"
+      ],
+      "ans": 0,
+      "exp": "7-2=5."
+    },
+    {
+      "q": "Si tienes 3 billetes de 10 pesos, ¿cuánto dinero tienes?",
+      "opts": [
+        "20",
+        "30",
+        "40"
+      ],
+      "ans": 1,
+      "exp": "3×10=30."
+    },
+    {
+      "q": "¿Cuál número representa la decena completa?",
+      "opts": [
+        "10",
+        "5",
+        "9"
+      ],
+      "ans": 0,
+      "exp": "Una decena = 10."
+    },
+    {
+      "q": "¿Quién descubrió América?",
+      "opts": [
+        "Miguel Hidalgo",
+        "Cristóbal Colón",
+        "Benito Juárez"
+      ],
+      "ans": 1,
+      "exp": "Viaje de 1492."
+    },
+    {
+      "q": "¿Qué se celebra el 16 de septiembre en México?",
+      "opts": [
+        "La Independencia de México",
+        "La Revolución Mexicana",
+        "El Día del Trabajo"
+      ],
+      "ans": 0,
+      "exp": "Grito de Independencia."
+    },
+    {
+      "q": "¿Qué hizo Miguel Hidalgo?",
+      "opts": [
+        "Inició la Independencia",
+        "Inventó la luz",
+        "Fue presidente"
+      ],
+      "ans": 0,
+      "exp": "Lideró el inicio del movimiento."
+    },
+    {
+      "q": "¿Quién fue Benito Juárez?",
+      "opts": [
+        "Un presidente de México",
+        "Un conquistador",
+        "Un pintor"
+      ],
+      "ans": 0,
+      "exp": "Presidente y reformista."
+    },
+    {
+      "q": "¿Qué usaban los mayas para escribir?",
+      "opts": [
+        "Jeroglíficos",
+        "Letras del alfabeto",
+        "Dibujos sin significado"
+      ],
+      "ans": 0,
+      "exp": "Escritura jeroglífica maya."
+    },
+    {
+      "q": "¿Qué se celebra el 20 de noviembre?",
+      "opts": [
+        "La Independencia",
+        "La Revolución Mexicana",
+        "El Día de la Bandera"
+      ],
+      "ans": 1,
+      "exp": "Inicio de la Revolución, 1910."
+    },
+    {
+      "q": "¿Qué representa el águila en la bandera de México?",
+      "opts": [
+        "Una leyenda azteca",
+        "Un animal del desierto",
+        "Un símbolo español"
+      ],
+      "ans": 0,
+      "exp": "Leyenda de Tenochtitlán."
+    },
+    {
+      "q": "¿Qué es un continente?",
+      "opts": [
+        "Un país",
+        "Una gran extensión de tierra",
+        "Un océano"
+      ],
+      "ans": 1,
+      "exp": "Masa terrestre muy extensa."
+    },
+    {
+      "q": "¿Cuántos continentes hay en el mundo?",
+      "opts": [
+        "5",
+        "6",
+        "4"
+      ],
+      "ans": 1,
+      "exp": "Modelo de 6 continentes."
+    },
+    {
+      "q": "¿Qué es un mapa?",
+      "opts": [
+        "Un dibujo que representa lugares",
+        "Un libro",
+        "Una historia"
+      ],
+      "ans": 0,
+      "exp": "Representación a escala."
+    },
+    {
+      "q": "¿Cuál es el planeta donde vivimos?",
+      "opts": [
+        "Venus",
+        "Marte",
+        "La Tierra"
+      ],
+      "ans": 2,
+      "exp": "Planeta Tierra."
+    },
+    {
+      "q": "¿Qué cubre la mayor parte de la Tierra?",
+      "opts": [
+        "Desiertos",
+        "Agua",
+        "Montañas"
+      ],
+      "ans": 1,
+      "exp": "~71% es agua."
+    },
+    {
+      "q": "¿Qué dirección indica el sol cuando sale?",
+      "opts": [
+        "Este",
+        "Norte",
+        "Oeste"
+      ],
+      "ans": 0,
+      "exp": "Sale por el este."
+    },
+    {
+      "q": "¿Cuál es el nombre del país donde vivimos?",
+      "opts": [
+        "México",
+        "España",
+        "Chile"
+      ],
+      "ans": 0,
+      "exp": "México."
+    },
+    {
+      "q": "¿Cuánto es 9 + 6?",
+      "opts": [
+        "14",
+        "15",
+        "16"
+      ],
+      "ans": 1,
+      "exp": "9+6=15."
+    },
+    {
+      "q": "¿Cuál es una consonante?",
+      "opts": [
+        "a",
+        "e",
+        "t"
+      ],
+      "ans": 2,
+      "exp": "t es consonante."
+    },
+    {
+      "q": "¿Qué figura tiene 3 lados?",
+      "opts": [
+        "Cuadrado",
+        "Triángulo",
+        "Círculo"
+      ],
+      "ans": 1,
+      "exp": "El triángulo tiene 3 lados."
+    },
+    {
+      "q": "¿Cuál palabra es un adjetivo?",
+      "opts": [
+        "rápido",
+        "correr",
+        "árbol"
+      ],
+      "ans": 0,
+      "exp": "Describe cualidades."
+    },
+    {
+      "q": "¿Cuánto es 4 × 3?",
+      "opts": [
+        "7",
+        "12",
+        "16"
+      ],
+      "ans": 1,
+      "exp": "4 por 3 es 12."
+    },
+    {
+      "q": "¿Qué instrumento se usa para medir tiempo?",
+      "opts": [
+        "Regla",
+        "Reloj",
+        "Balanza"
+      ],
+      "ans": 1,
+      "exp": "El reloj mide el tiempo."
+    }
+  ]
+}

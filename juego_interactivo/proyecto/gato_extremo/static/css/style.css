@@ -1,0 +1,111 @@
+:root {
+    --c-primary: #FF0055;    
+    --c-secondary: #00E5FF;  
+    --c-accent: #FFD600;     
+    --c-dark: #2D0036;       
+    --c-white: #FFFFFF;
+}
+
+body { margin: 0; overflow: hidden; font-family: 'Titan One', cursive; user-select: none; }
+
+/* --- FONDOS DE VIDEO --- */
+#background-container { position: fixed; top:0; left:0; width: 100%; height: 100%; z-index: -2; background: black; }
+.bg-video {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;
+    transition: opacity 1s ease; opacity: 1;
+}
+.hidden-video { opacity: 0; }
+
+.overlay-pattern {
+    position: absolute; top:0; left:0; width:100%; height:100%;
+    background-image: radial-gradient(rgba(255,255,255,0.2) 2px, transparent 2px);
+    background-size: 20px 20px; z-index: -1; pointer-events: none;
+}
+
+#confetti-canvas { position: fixed; top:0; left:0; width:100%; height:100%; pointer-events: none; z-index: 999; }
+
+.screen { position: absolute; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.hidden { display: none !important; }
+
+/* --- PANTALLA DE INICIO --- */
+#start-overlay { background: rgba(45, 0, 54, 0.95); z-index: 200; }
+.mega-title { font-size: 5rem; color: var(--c-accent); text-shadow: 4px 4px 0 var(--c-primary); animation: bounce 2s infinite; }
+.blink-text { color: var(--c-white); font-size: 2rem; animation: pulse 1s infinite alternate; }
+.pill-status { background: var(--c-dark); color: var(--c-secondary); padding: 10px 20px; border-radius: 50px; margin-top: 20px; border: 2px solid var(--c-secondary); }
+
+/* --- MENÚ --- */
+.game-logo {
+    font-size: 5rem; line-height: 0.9; text-align: center; color: var(--c-white);
+    -webkit-text-stroke: 3px var(--c-dark); text-shadow: 0px 8px 0px var(--c-dark);
+    transform: rotate(-3deg); margin-bottom: 40px;
+}
+.game-logo span { color: var(--c-accent); font-size: 6rem; }
+
+.menu-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: 4px solid var(--c-dark); border-radius: 20px; padding: 20px 40px; margin: 15px;
+    font-size: 2rem; color: var(--c-dark); width: 350px; text-align: center;
+    box-shadow: 0 6px 0 var(--c-dark); transition: transform 0.1s;
+}
+.menu-btn.selected {
+    background: var(--c-accent); transform: scale(1.1) rotate(2deg);
+    border-color: var(--c-white); box-shadow: 0 6px 0 var(--c-primary), 0 0 30px var(--c-accent);
+}
+
+/* --- JUEGO --- */
+.game-ui {
+    background: rgba(255,255,255,0.15); backdrop-filter: blur(10px);
+    padding: 30px; border-radius: 40px; border: 5px solid var(--c-white);
+}
+.turn-badge {
+    background: var(--c-dark); color: var(--c-secondary); padding: 10px 40px; 
+    border-radius: 20px; font-size: 2rem; border: 3px solid var(--c-secondary); margin-bottom: 20px;
+}
+#board {
+    display: grid; grid-template-columns: repeat(3, 110px); gap: 12px;
+    background: var(--c-dark); padding: 15px; border-radius: 20px; position: relative;
+}
+.cell {
+    width: 110px; height: 110px; background: var(--c-white); border-radius: 15px;
+    font-size: 4.5rem; display: flex; align-items: center; justify-content: center;
+    box-shadow: inset 0 -6px 0 rgba(0,0,0,0.2);
+}
+.cell.pop { animation: popIn 0.3s; }
+#cursor {
+    position: absolute; width: 100px; height: 100px;
+    border: 8px solid var(--c-secondary); border-radius: 20px;
+    box-shadow: 0 0 20px var(--c-secondary), inset 0 0 10px var(--c-secondary);
+    transition: top 0.1s, left 0.1s;
+}
+
+/* --- MODALES --- */
+.modal {
+    position: fixed; top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.8); z-index: 500; display: flex; align-items: center; justify-content: center;
+}
+.modal-card {
+    background: linear-gradient(135deg, #FFF, #F0F0F0); width: 600px; padding: 30px;
+    border-radius: 30px; border: 8px solid var(--c-primary); box-shadow: 0 20px 0 rgba(0,0,0,0.3);
+    text-align: center;
+}
+.modal-header { font-size: 2.5rem; color: var(--c-primary); margin-bottom: 15px; }
+.modal-body { font-size: 1.5rem; color: #555; margin-bottom: 25px; font-family: Arial, sans-serif; font-weight: bold; }
+
+.opt-btn {
+    background: #EEE; padding: 15px 20px; margin: 10px 0;
+    border-radius: 15px; font-size: 1.3rem; border: 3px solid transparent;
+}
+.opt-btn.selected {
+    background: var(--c-secondary); color: var(--c-dark); border-color: var(--c-dark); transform: scale(1.05);
+}
+
+/* --- BARRA DE TIEMPO --- */
+.timer-wrapper { display: flex; align-items: center; margin-top: 20px; }
+.timer-icon { font-size: 2rem; margin-right: 10px; animation: shake 0.5s infinite; }
+.timer-track { flex-grow: 1; height: 20px; background: #ddd; border-radius: 10px; overflow: hidden; border: 2px solid #333; }
+#modal-timer-fill { height: 100%; width: 100%; background: var(--c-primary); transition: width 0.1s linear; }
+
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+@keyframes pulse { from { opacity: 0.5; } to { opacity: 1; } }
+@keyframes popIn { from { transform: scale(0); } to { transform: scale(1); } }
+@keyframes shake { 0% { transform: rotate(0deg); } 25% { transform: rotate(10deg); } 75% { transform: rotate(-10deg); } }

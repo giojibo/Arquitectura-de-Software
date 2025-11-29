@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¡SÚPER GATO! 🐱⚡</title>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div id="background-container" style="background-color: #1a1a1a;">
+        <video autoplay muted loop playsinline id="vid-menu" class="bg-video">
+            <source src="{{ url_for('static', filename='assets/bg_menu.mp4') }}" type="video/mp4">
+        </video>
+        
+        <video autoplay muted loop playsinline id="vid-game" class="bg-video hidden-video">
+            <source src="{{ url_for('static', filename='assets/bg_game.mp4') }}" type="video/mp4">
+        </video>
+        
+        <div class="overlay-pattern"></div>
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <div id="start-overlay">
+        <div class="floating-content">
+            <h1 class="mega-title">🎮 CONECTADO</h1>
+            <p class="blink-text">Presiona el BOTÓN para entrar</p>
+            <div id="debug-status" class="pill-status">Esperando señal...</div>
+        </div>
+    </div>
+
+    <div id="menu-screen" class="screen hidden">
+        <h1 class="game-logo">JUEGO DEL<br><span>GATO</span> 🐱</h1>
+        <div class="menu-container">
+            <div id="btn-pvp" class="menu-btn selected">
+                <span class="icon">🥊</span> 1 vs 1
+            </div>
+            <div id="btn-ia" class="menu-btn">
+                <span class="icon">🤖</span> vs CPU
+            </div>
+        </div>
+    </div>
+
+    <div id="game-screen" class="screen hidden">
+        <div class="game-ui">
+            <div class="header-panel">
+                <div id="turn-display" class="turn-badge">Turno: X</div>
+            </div>
+            <div id="board">
+                <div class="cell" id="c0"></div><div class="cell" id="c1"></div><div class="cell" id="c2"></div>
+                <div class="cell" id="c3"></div><div class="cell" id="c4"></div><div class="cell" id="c5"></div>
+                <div class="cell" id="c6"></div><div class="cell" id="c7"></div><div class="cell" id="c8"></div>
+                <div id="cursor"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-card pop-in">
+            <div class="modal-header" id="modal-title">¡ATENCIÓN!</div>
+            <div class="modal-body" id="modal-msg">Mensaje</div>
+            <div id="modal-options" class="options-grid"></div>
+            <div class="timer-wrapper hidden" id="timer-container">
+                <div class="timer-icon">⏰</div>
+                <div class="timer-track">
+                    <div id="modal-timer-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="music-menu" loop><source src="{{ url_for('static', filename='assets/menu.mp3') }}" type="audio/mpeg"></audio>
+    <audio id="music-game" loop><source src="{{ url_for('static', filename='assets/game.mp3') }}" type="audio/mpeg"></audio>
+    <audio id="sfx-place"><source src="{{ url_for('static', filename='assets/place.mp3') }}" type="audio/mpeg"></audio>
+    <audio id="sfx-win"><source src="{{ url_for('static', filename='assets/win.mp3') }}" type="audio/mpeg"></audio>
+
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>

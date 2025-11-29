@@ -1,0 +1,4 @@
+# Ignorar videos grandes
+*.mp4
+*.mkv
+juego_interactivo/evidencia_video/
